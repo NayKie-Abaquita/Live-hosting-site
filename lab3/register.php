@@ -12,10 +12,6 @@
 </head>
 <body>
     <main class="page-wrap">
-        <header class="top-line">
-            <a class="brand" href="index.php">Registration</a>
-            <span class="small-label">Registration</span>
-        </header>
 
         <section class="signup-card">
             <div class="card-heading">

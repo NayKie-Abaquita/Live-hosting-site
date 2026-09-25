@@ -50,12 +50,10 @@ if (empty($fname) || empty($lname) || empty($email) || empty($password) || empty
 <body>
     <main class="page-wrap">
         <header class="top-line">
-            <a class="brand" href="index.php">Registration</a>
             <span class="small-label">Signup Result</span>
         </header>
 
         <section class="signup-card">
-            <p class="eyebrow">Registration</p>
             <h1><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></h1>
             <p class="result-text"><?php echo nl2br(htmlspecialchars($message, ENT_QUOTES, 'UTF-8')); ?></p>
 
@@ -73,7 +71,6 @@ if (empty($fname) || empty($lname) || empty($email) || empty($password) || empty
             <a class="btn btn-purple w-100" href="register.php">Back to form</a>
         </section>
 
-        <p class="page-note">Simple registration form.</p>
     </main>
 </body>
 </html>
