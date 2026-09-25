@@ -9,8 +9,9 @@ $birthday = $_POST['birthday'] ?? '';
 $course = $_POST['course'] ?? '';
 
 $pattern = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{5,20}$/';
-$pageTitle = 'Course Signup';
+$pageTitle = 'Registration';
 $message = '';
+$details = [];
 
 if (empty($fname) || empty($lname) || empty($email) || empty($password) || empty($confirmPassword) || empty($gender) || empty($birthday) || empty($course)) {
     $pageTitle = 'Missing details';
@@ -24,6 +25,14 @@ if (empty($fname) || empty($lname) || empty($email) || empty($password) || empty
 } else {
     $pageTitle = 'Form checked';
     $message = 'Your details passed the checks.';
+    $details = [
+        'First name' => $fname,
+        'Last name' => $lname,
+        'Email' => $email,
+        'Gender' => $gender,
+        'Birthday' => $birthday,
+        'Course' => $course,
+    ];
 }
 ?>
 <!doctype html>
@@ -41,18 +50,30 @@ if (empty($fname) || empty($lname) || empty($email) || empty($password) || empty
 <body>
     <main class="page-wrap">
         <header class="top-line">
-            <a class="brand" href="index.php">Course Signup</a>
+            <a class="brand" href="index.php">Registration</a>
             <span class="small-label">Signup Result</span>
         </header>
 
         <section class="signup-card">
-            <p class="eyebrow">Course Signup</p>
+            <p class="eyebrow">Registration</p>
             <h1><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></h1>
             <p class="result-text"><?php echo nl2br(htmlspecialchars($message, ENT_QUOTES, 'UTF-8')); ?></p>
-            <a class="btn btn-purple w-100" href="register.php">Back to signup</a>
+
+            <?php if (count($details) > 0) : ?>
+                <div class="saved-details">
+                    <?php foreach ($details as $label => $value) : ?>
+                        <div class="detail-row">
+                            <span><?php echo htmlspecialchars($label, ENT_QUOTES, 'UTF-8'); ?></span>
+                            <strong><?php echo htmlspecialchars($value, ENT_QUOTES, 'UTF-8'); ?></strong>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+
+            <a class="btn btn-purple w-100" href="register.php">Back to form</a>
         </section>
 
-        <p class="page-note">Simple course registration for students.</p>
+        <p class="page-note">Simple registration form.</p>
     </main>
 </body>
 </html>

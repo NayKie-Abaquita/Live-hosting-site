@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Course Signup</title>
+    <title>Registration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,14 +13,13 @@
 <body>
     <main class="page-wrap">
         <header class="top-line">
-            <a class="brand" href="index.php">Course Signup</a>
-            <span class="small-label">Course Signup</span>
+            <a class="brand" href="index.php">Registration</a>
+            <span class="small-label">Registration</span>
         </header>
 
         <section class="signup-card">
             <div class="card-heading">
-                <p class="eyebrow">Course Signup</p>
-                <h1>Choose your elective</h1>
+                <p class="eyebrow">Registration</p>
                 <p>Enter your details to continue.</p>
             </div>
 
@@ -90,7 +89,7 @@
             </form>
         </section>
 
-        <p class="page-note">Simple course registration for students.</p>
+        <p class="page-note">Simple registration form.</p>
     </main>
 
     <script>
