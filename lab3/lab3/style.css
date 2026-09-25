@@ -1,0 +1,197 @@
+:root {
+    --page-purple: #f1edff;
+    --main-purple: #7048b8;
+    --button-purple: #6f42c1;
+    --button-purple-dark: #59339d;
+    --line-purple: #d9cef0;
+    --text-dark: #2f2940;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--page-purple);
+    color: var(--text-dark);
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.page-wrap {
+    width: min(calc(100% - 2rem), 760px);
+    margin: 0 auto;
+    padding: 2.5rem 0;
+}
+
+.top-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.brand {
+    color: var(--button-purple);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand:hover {
+    color: var(--button-purple-dark);
+}
+
+.small-label,
+.eyebrow,
+.page-note {
+    color: #716783;
+    font-size: .875rem;
+}
+
+.small-label {
+    text-align: right;
+}
+
+.signup-card {
+    padding: clamp(1.5rem, 5vw, 3rem);
+    background: #ffffff;
+    border: 1px solid var(--line-purple);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(75, 53, 112, .08);
+}
+
+.card-heading {
+    margin-bottom: 1.75rem;
+}
+
+.card-heading h1 {
+    margin: .35rem 0 .65rem;
+    color: var(--text-dark);
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
+    font-weight: 700;
+}
+
+.card-heading p:last-child {
+    margin-bottom: 0;
+    color: #716783;
+}
+
+.eyebrow {
+    margin: 0;
+    color: var(--main-purple);
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.form-label {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    min-height: 48px;
+    border-color: #d6cce8;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--button-purple);
+    box-shadow: 0 0 0 .2rem rgba(111, 66, 193, .15);
+}
+
+.form-text {
+    color: #716783;
+}
+
+.password-line {
+    display: flex;
+    gap: .5rem;
+}
+
+.password-line .form-control {
+    min-width: 0;
+}
+
+.password-button {
+    min-width: 66px;
+    border: 1px solid #d6cce8;
+    border-radius: 8px;
+    background: #f7f3ff;
+    color: var(--button-purple);
+    font-weight: 600;
+}
+
+.password-button:hover,
+.password-button:focus {
+    background: #eee7ff;
+    border-color: var(--button-purple);
+    color: var(--button-purple-dark);
+}
+
+.btn-purple {
+    min-height: 48px;
+    border-color: var(--button-purple);
+    border-radius: 8px;
+    background: var(--button-purple);
+    font-weight: 600;
+}
+
+.btn-purple:hover,
+.btn-purple:focus {
+    border-color: var(--button-purple-dark);
+    background: var(--button-purple-dark);
+}
+
+.page-note {
+    margin: 1.25rem 0 0;
+    text-align: center;
+}
+
+.result-text {
+    color: #716783;
+}
+
+.saved-details {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f8f5ff;
+    border: 1px solid var(--line-purple);
+    border-radius: 8px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .45rem 0;
+    border-bottom: 1px solid #e8e0f6;
+}
+
+.detail-row:last-child {
+    border-bottom: 0;
+}
+
+.detail-row span {
+    color: #716783;
+}
+
+.detail-row strong {
+    color: var(--text-dark);
+    text-align: right;
+}
+
+@media (max-width: 480px) {
+    .page-wrap {
+        padding: 1.5rem 0;
+    }
+
+    .small-label {
+        max-width: 120px;
+    }
+}
